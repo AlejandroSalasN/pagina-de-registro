@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+body {
+    background-color: #05050f;
+    color: white;
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    background-color: #2e2f43;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    flex-direction: column;
+    border-radius: 5px;
+    width: 360px;
+    height: auto;
+    padding: 20px 15px;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 35px;
+}
+
+.llenar input {
+    background-color: #5a5b69;
+    color: #fcfcfc;
+    margin-top: 5px;
+    margin-bottom: 35px;
+    width: 330px;
+    height: 38px;
+    padding: 3px 8px;
+    font-size: 1rem;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+.llenar p {
+    color: blue;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.botones button {
+    border-width: 0;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.botones .cancelar {
+    background-color: transparent;
+    color: #fcfcfc;
+    height: 2rem;
+    width: 6rem;
+}
+
+.botones .cancelar:hover,
+.botones .confirmar:hover {
+    cursor: pointer;
+}
+
+.botones .confirmar {
+    background-color: #fcfcfc;
+    color: #05050f;
+    border-radius: 5px;
+    height: 2rem;
+    width: 6rem;
+}
