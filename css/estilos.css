@@ -147,7 +147,10 @@ h1 {
     align-items: center;
 }
 
-@media (max-width: 912px) {
+@media (max-width: 912px) and (orientation: landscape){
+    .container {
+        height: auto;
+    }
     .contenedor-bienvenida h1 {
         font-size: 5rem;
 
@@ -159,7 +162,16 @@ h1 {
     }
 }
 
-@media (max-width: 468px) {
+@media (max-width: 468px) and (orientation: portrait) {
+    .contenedor {
+        width: 90%;
+        height: auto;
+    }
+
+    .llenar input {
+        width: 90%;
+    }
+
     .contenedor-bienvenida .logo {
         width: 90%;
     }
@@ -170,5 +182,30 @@ h1 {
     }
     .contenedor-bienvenida h3 {
         font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 468px) and (orientation: landscape) {
+    .contenedor {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 360px) and (orientation: portrait) {
+    .contenedor {
+        width: 285px;
+        height: auto;
+    }
+
+    .llenar input {
+        width: 270px;
+    }
+}
+
+@media (max-width: 360px) and (orientation: landscape) {
+    .contenedor {
+        width: 90%;
+        height: auto;
     }
 }
