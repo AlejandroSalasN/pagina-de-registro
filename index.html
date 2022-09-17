@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="./css/estilos.css">
     <title>Registro</title>
 
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="1">
         <h1>elMana</h1>
         <form class="contenedor" method="POST" action="/">
             <div class="llenar">
                 <label>Nombre:</label>
-                <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" id="nombre" required>
                 <label>Apellido:</label>
-                <input type="text" name="apellido" placeholder="Apellido" id="apellido">
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" id="apellido" required>
                 <label>Teléfono:</label>
-                <input type="text" name="telefono" placeholder="Teléfono" id="telefono">
+                <input type="text" name="telefono" id="telefono" placeholder="Teléfono" id="telefono" required>
             </div>
             <div class="botones">
                 <button type="reset" class="cancelar">Cancelar</button>
@@ -28,10 +28,21 @@
             </div>
         </form>
     </div>
-    <div>
-        <img src="" alt="">
-        <h1></h1>
-    </div>
+    <!-- <div class="contenedor-bienvenida mostrar" id="2">
+        <img src="https://res.cloudinary.com/dkkohwnui/image/upload/v1663389057/salteado_cj9q4w.jpg" class="fondo"
+            alt="plato salteado">
+        <div class="contenido">
+            <img src="https://res.cloudinary.com/dkkohwnui/image/upload/v1663390159/cubiertosEM_dihffs.png" class="logo"
+                alt="logoProvisional">
+            <div class="texto">
+                <h1>Bienvenido(a)</h1>
+                <h3>gracias por su registro</h3>
+            </div>
+
+        </div>
+    </div> -->
+
+    <script src="./js/script.js"></script>
 
 </body>
 

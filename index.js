@@ -20,8 +20,8 @@ mongoose.connect("mongodb+srv://alejandro_s:salas1610@cluster0.rwtkpqx.mongodb.n
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-.then(() => console.log("MongoDB conected"))
-.catch(err => console.log(err));
+    .then(() => console.log("MongoDB conected"))
+    .catch(err => console.log(err));
 
 const connection = mongoose.connection;
 
@@ -41,7 +41,8 @@ const registroEsquema = {
     },
     telefono: {
         type: String,
-        trim: true
+        trim: true,
+        unique: true
     }
 };
 
@@ -52,20 +53,20 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/registrados', async (req, res) => {
-    const users = await Persona.find();
-    console.log(users);
-    res.json(users);
-});
-
 app.post("/", async (req, res) => {
-    let usuario = new Persona({
-        nombre: req.body.nombre,
-        apellido: req.body.apellido,
-        telefono: req.body.telefono,
-    });
-    await usuario.save();
-    res.redirect("/");
+    const { nombre, apellido, telefono } = req.body;
+    if (nombre !== "" && apellido !== "" && telefono.length === 8) {
+        let usuario = new Persona({
+            nombre: nombre,
+            apellido: apellido,
+            telefono: telefono,
+        });
+        await usuario.save();
+        res.redirect('/');
+    } else {
+        res.redirect("/")
+    }
+
 });
 
 
